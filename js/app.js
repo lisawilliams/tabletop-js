@@ -1,13 +1,16 @@
 $(document).ready(function () {
   Tabletop.init({
   
-  // key only: 0AppPPX-L4ABKdExWaVBqWFFuVnFYU0Y1OHUwc0dNb3c'
-  // full public url to spreadsheet: https://docs.google.com/spreadsheet/ccc?key=0AppPPX-L4ABKdExWaVBqWFFuVnFYU0Y1OHUwc0dNb3c&usp=sharing
-  // currently this gives a 400:Bad Request error on 
-  // GET https://spreadsheets.google.com/feeds/worksheets/0AppPPX-L4ABKdExWaVBqWFFuV…/basic?alt=json-in-script&callback=Tabletop.callbacks.tt136665610463249112 400 (Bad Request) 
-  // at tabletop.js line 184
+ // This code gives an error:
+ // "Uncaught TypeError: Uncaught TypeError: Cannot read property'1' of null" 
+ //on tabletop.js line 75. Here's the relevant code: 
+ /* Be friendly about what you accept */ 
+ //if(/key=/.test(this.key)) { 
+ //  this.log("You passed a key as a URL! Attempting to parse."); 
+ //this.key = this.key.match("key=(.*?)&")[1];
   
-    key: '0AppPPX-L4ABKdExWaVBqWFFuVnFYU0Y1OHUwc0dNb3c',
+    key: 'https://docs.google.com/spreadsheet/ccc?key=0AiT9esEM1Yc5dEp6MnRtT0cwNUJZOGgxY0FVNnV1RlE',
+    
     callback: function(data, tabletop) { 
       var i,
           dataLength = data.length;
