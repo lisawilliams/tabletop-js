@@ -9,7 +9,7 @@ $(document).ready(function () {
  //  this.log("You passed a key as a URL! Attempting to parse."); 
  //this.key = this.key.match("key=(.*?)&")[1];
   
-    key: 'https://docs.google.com/spreadsheet/ccc?key=0AiT9esEM1Yc5dEp6MnRtT0cwNUJZOGgxY0FVNnV1RlE',
+    key: '0Al0yu3Zxr7ZJdFg5VDItTjExRTJVUWxvUlBFVkxEdGc',
     
     callback: function(data, tabletop) { 
       var i,
