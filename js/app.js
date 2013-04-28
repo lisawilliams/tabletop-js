@@ -1,8 +1,7 @@
 $(document).ready(function () {
   Tabletop.init({
   
- // This code gives an error:
- // "Uncaught TypeError: Uncaught TypeError: Cannot read property'1' of null" 
+  
  //on tabletop.js line 75. Here's the relevant code: 
  /* Be friendly about what you accept */ 
  //if(/key=/.test(this.key)) { 
@@ -16,10 +15,17 @@ $(document).ready(function () {
           dataLength = data.length;
           
       for (i=0; i<dataLength; i++) {
-        $('#politicians').append(
-          $('<li>', {
-            text: data[i].politician + ', ' + data[i].position
-          })
+        $('#lawEnforcement').append(
+       // old line which puts everything in a list
+         $('<li>', {
+           text:  data[i].agency + ", " + data[i].per1000 + ",  " + data[i].population 
+          }) 
+          
+          // I would like to put things in a table but I can't make it work
+                 
+         //  $('<td>', {
+       //      text: data[i].agency + '</td><td> ' + data[i].per1000 + '</td><td>  ' + data[i].population '</td>'
+        //  })
         );
       }
     },
